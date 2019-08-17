@@ -11,8 +11,17 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/dog", function(req, res) {
+    res.render("dog");
+  });
+
+  app.get("/cat", function(req, res) {
+    res.render("cat");
+  });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
+    // eslint-disable-next-line prettier/prettier
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("example", {
         example: dbExample

@@ -39,6 +39,10 @@ section:before {
   z-index: 100;
   position: relative;
 }
+#catContainer {
+  z-index: 100;
+  position: relative;
+}
 #homeContainer {
   z-index: 100;
   position: relative;

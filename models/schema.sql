@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS cutomer_db;
+DROP DATABASE IF EXISTS customer_db;
 CREATE DATABASE customer_db;

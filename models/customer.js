@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    number: DataTypes.INTEGER
+    number: DataTypes.STRING
   });
   return Customers;
 };

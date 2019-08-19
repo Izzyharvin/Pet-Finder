@@ -1,0 +1,2 @@
+INSERT INTO customers (name, email, number)
+VALUES ("Bruce Banner", "thehulk@me.com", "7045555555"), ("Tony Stark", "ironman@gmail.com", "9805555555"), ("Steve Rodgers", "capamerica@gmail.com", "8035555555");

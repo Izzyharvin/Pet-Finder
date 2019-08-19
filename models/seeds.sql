@@ -1,2 +1,2 @@
-INSERT INTO customers (name, email, number)
-VALUES ("Bruce Banner", "thehulk@me.com", "7045555555"), ("Tony Stark", "ironman@gmail.com", "9805555555"), ("Steve Rodgers", "capamerica@gmail.com", "8035555555");
+INSERT INTO customers (name, email, number, createdAt, updatedAt)
+VALUES ("Bruce Banner", "thehulk@me.com", "7045555555", "2019-08-14 15:27:52", "2019-08-14 15:27:52"), ("Tony Stark", "ironman@gmail.com", "9805555555", "2019-08-14 15:27:52", "2019-08-14 15:27:52"), ("Steve Rodgers", "capamerica@gmail.com", "8035555555", "2019-08-14 15:27:52", "2019-08-14 15:27:52");

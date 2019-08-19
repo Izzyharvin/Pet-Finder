@@ -4,20 +4,22 @@ var axios = require("axios");
 module.exports = function(app) {
   // Get all customers
   app.get("/api/customers", function(req, res) {
-    db.Customers.findAll({}).then(function(results) {
+    db.customers.findAll().then(function(results) {
       res.json(results);
     });
   });
 
   // Create a new customers
   app.post("/api/customers", function(req, res) {
-    db.Customers.create({
-      name: req.body.name,
-      email: req.body.email,
-      number: req.body.number
-    }).then(function(results) {
-      res.json(results);
-    });
+    db.customers
+      .create({
+        name: req.body.name,
+        email: req.body.email,
+        number: req.body.number
+      })
+      .then(function(results) {
+        res.json(results);
+      });
   });
   app.get("/api/petfinder", function(req, res) {
     var options = {

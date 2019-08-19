@@ -47,6 +47,14 @@ section:before {
   z-index: 100;
   position: relative;
 }
+#catContainer {
+  z-index: 100;
+  position: relative;
+}
+.footer {
+  z-index: 100;
+  position: relative;
+}
 #dogbutton {
   position: relative;
   padding: 15px 30px;
@@ -89,6 +97,16 @@ a svg rect {
 }
 #home {
   width: 1100px;
+  height: 790px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+}
+#dogContainer {
+  width: 1100px;
   background: rgba(0, 0, 0, 0.4);
   padding: 40px;
   text-align: center;
@@ -96,29 +114,24 @@ a svg rect {
   margin-top: 5%;
   color: white;
 }
-/*Desktop*/
-@media only screen and (max-width: 980px) {
-	.wrapper {
-	  width:100%;
-	}
-	ul {
-	  float: right;
-	  margin-left: 0px;
-	  position: relative;
-	  right: none;
-	}
-  }
-  
-  /*Tablet*/
-  @media only screen and (max-width: 768px) {
-	.wrapper {
-	  width:100%;
-	}
-  }
-  
-  /*Phone*/
-  @media only screen and (max-width: 640px) {
-	.wrapper {
-	  width:100%;
-	}
-  }
+#catContainer {
+  width: 1100px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+}
+h4 {
+  font-size: 30px;
+}
+h2, footer {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+#header {
+  color: white;
+}

@@ -1,7 +1,6 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
+var $catBtn = $("#catbutton");
+var $dogBtn = $("#dogbutton");
 var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
@@ -61,27 +60,32 @@ var refreshExamples = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var customerSubmit = function(event) {
-  event.preventDefault();
+var customerSubmit = function(type) {
+ 
 
   var newCustomer = {
-    name: $("c1")
+    name: $("#c1")
       .val()
       .trim(),
-    email: $("c2")
+    email: $("#c2")
       .val()
       .trim(),
-    number: $("c3")
+    number: $("#c3")
       .val()
       .trim()
   };
   $.ajax("/api/customers", {
     type: "POST",
     data: newCustomer
-  }).then(function() {
-    console.log("Customer has been added to database...");
-    location.reload();
-  });
+  })
+    .then(function() {
+      console.log(type);
+      console.log("Customer has been added to database...");
+      window.location.href = `/${type}`
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -97,5 +101,12 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", customerSubmit);
+$dogBtn.on("click", function(event) {
+  event.preventDefault();
+  customerSubmit("dog");
+});
+$catBtn.on("click", function(event) {
+  event.preventDefault();
+  customerSubmit("cat");
+});
 $exampleList.on("click", ".delete", handleDeleteBtnClick);

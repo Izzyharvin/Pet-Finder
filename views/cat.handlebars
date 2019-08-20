@@ -15,82 +15,66 @@
                 <h4>How far out would you like us to search from your zip code?</h4>
                 <select id="q2">
                     <option value>Select an option</option>
-                    <option value="1">25 miles</option>
-                    <option value="2">50 miles</option>
-                    <option value="3">75 miles</option>
-                    <option value="4">100 miles</option>
+                    <option value="25">25 miles</option>
+                    <option value="50">50 miles</option>
+                    <option value="75">75 miles</option>
+                    <option value="100">100 miles</option>
                 </select>
 
                 <h4>Do you want a boy or a girl?</h4>
                 <select id="q3">
                     <option value>Select an option</option>
-                    <option value="1">Boy</option>
-                    <option value="2">Girl</option>
-                    <option value="3">Either</option>
+                    <option value="male">Boy</option>
+                    <option value="female">Girl</option>
+                    <option value="unknown">Either</option>
                 </select>
 
                 <h4>What age range are you looking for?</h4>
                 <select id="q4">
                     <option value>Select an option</option>
-                    <option value="1">0 - 5</option>
-                    <option value="2">5 - 10</option>
-                    <option value="3">10+</option>
-                </select>
-
-                <h4>How active of a cat do you want?</h4>
-                <select id="q5">
-                    <option value>Select an option</option>
-                    <option value="1">Calm/Reserved</option>
-                    <option value="2">Average Acitivy</option>
-                    <option value="3">Likes to play!</option>
+                    <option value="baby">Baby</option>
+                    <option value="young">Young</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
                 </select>
 
                 <h4>Do you have children?</h4>
-                <select id="q6">
+                <select id="q5">
                     <option value>Select an option</option>
-                    <option value="1">No children</option>
-                    <option value="2">1 child</option>
-                    <option value="3">Multiple children</option>
-                </select>
-
-                <h4>What is the age of the youngest child?</h4>
-                <select id="q7">
-                    <option value>Select an option</option>
-                    <option value="1">0 - 5 years old</option>
-                    <option value="2">5 - 10 years old</option>
-                    <option value="3">10 + years old</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                 </select>
 
                 <h4>Do you have dogs?</h4>
-                <select id="q8">
+                <select id="q6">
                     <option value>Select an option</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                 </select>
 
                 <h4>Do you have other cats?</h4>
-                <select id="q9">
+                <select id="q7">
                     <option value>Select an option</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
                 </select>
 
                 <h4>What size cat are you looking for?</h4>
-                <select id="q10">
+                <select id="q8">
                     <option value>Select an option</option>
-                    <option value="1">Small</option>
-                    <option value="2">Large</option>
-                    <option value="3">No preference</option>
+                    <option value="small">Small</option>
+                    <option value="large">Large</option>
+                    <option value="null">No preference</option>
                 </select>
 
                 <h4>What kind of coat</h4>
-                <select id="q11">
+                <select id="q9">
                     <option value>Select an option</option>
-                    <option value="1">Short</option>
-                    <option value="2">Curly</option>
-                    <option value="3">Wire</option>
-                    <option value="4">Hairless</option>
-                    <option value="5">No preference</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                    <option value="hairless">Hairless</option>
+                    <option value="null">No preference</option>
                 </select>
                 <br>
                 <br>
@@ -106,6 +90,33 @@
             </footer>
         </section>
     </div>
+
+    {{!-- <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="" alt="">
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> --}}
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

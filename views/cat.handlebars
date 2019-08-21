@@ -78,16 +78,16 @@
                 </select>
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitIt" value="cat">
-                    <i class="fa fa-check-circle"></i>Submit
-                </button>
-            </div>
-
-            <footer class="footer">
+                <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" style="width: 150px; height: 50px; margin-left: 40%; background-color: blue" id="submit"><button style= "background-color: blue; width: 150px; height: 50px; margin-left: 40%; margin: auto">Submit</button></div>
+                </div>
+                            <footer class="footer">
                 <div class="container">
                     <p><a href="/">Pet Connection Home Page</a></p>
                 </div>
             </footer>
+            </div>
+
+
         </section>
     </div>
 
@@ -119,13 +119,38 @@
     </div> --}}
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
+    <script>
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
 
-    <script src="./js/index.js"></script>
+            // console.log("listen")
+
+            var userAnswer = {
+                name: $(".name").val().trim(),
+                photo: $(".photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val(),
+                ]
+            }
+        })
+
+    </script>
 </body>

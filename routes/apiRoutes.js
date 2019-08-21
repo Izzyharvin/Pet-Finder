@@ -41,42 +41,40 @@ module.exports = function(app) {
         console.log(err);
       });
     function petCall(bearer) {
-      console.log(bearer)
+      console.log(bearer);
       var config = {
         headers: { Authorization: "Bearer " + bearer }
       };
-      let coat = "";
-      if (holder.q9 !== null){
-        coat ="&coat=" + holder.q9;
+      var coat = "";
+      if (holder.q9 !== null) {
+        coat = "&coat=" + holder.q9;
       }
-     
-      let urlID = "https://api.petfinder.com/v2/animals?limit=3&type=" +
-      holder.type
-       +
-      "&location=" +
-      holder.q1 +
-      "&distance=" +
-      parseInt(holder.q2) +
-      "&gender=" +
-      holder.q3 +
-      "&age=" +
-      holder.q4 +
-      "&good_with_children=" +
-      holder.q5 +
-      "&good_with_dogs=" +
-      holder.q6 +
-      "&good_with_cats=" +
-      holder.q7 +
-      "&size=" +
-      holder.q8 +
-      coat
-      console.log(urlID)
+
+      var urlID =
+        "https://api.petfinder.com/v2/animals?limit=3&type=" +
+        holder.type +
+        "&location=" +
+        holder.q1 +
+        "&distance=" +
+        parseInt(holder.q2) +
+        "&age=" +
+        holder.q4 +
+        "&good_with_children=" +
+        holder.q5 +
+        "&good_with_dogs=" +
+        holder.q6 +
+        "&good_with_cats=" +
+        holder.q7 +
+        "&size=" +
+        holder.q8 +
+        coat;
+      if (holder.q3 !== "unknown") {
+        urlID += "&gender=" + holder.q3;
+      }
+      console.log(urlID);
       axios
         // .get("https://api.petfinder.com/v2/animals?type=dog&page=2", config)
-        .get(
-         urlID,
-          config
-        )
+        .get(urlID, config)
         .then(function(pets) {
           console.log(pets.data);
           res.render("results", {

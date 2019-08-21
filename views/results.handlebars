@@ -6,12 +6,14 @@
           <h2 class="card-title" style="text-align: center">Pets to choose from</h2>
           <br><br>
           {{#each pets}}
-          {{!-- <img src="{{image.small}}" alt="Picture of pet"> --}}
+          {{#each photos}}
+          <img src="{{small}}" alt="Picture of pet">
+          {{/each}}
           <p><strong>Name</strong>: {{name}}</p>
           <p><strong>Gender</strong>: {{gender}}</p>
           <p><strong>Age</strong>: {{age}}</p>
           <p><strong>Description</strong>: {{description}}</p>
-          <p><strong>Shelter</strong>: {{url}}</p>
+          <a href="{{url}}">{{url}}</a>
           <hr>
           <br><br>
           {{/each}}

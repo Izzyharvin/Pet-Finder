@@ -99,7 +99,7 @@ a svg rect {
 }
 #home {
   width: 1100px;
-  height: 850px;
+  height: 820px;
   background: rgba(0, 0, 0, 0.4);
   padding: 40px;
   text-align: center;
@@ -109,6 +109,7 @@ a svg rect {
 }
 #dogContainer {
   width: 1100px;
+  height: 880px;
   background: rgba(0, 0, 0, 0.4);
   padding: 40px;
   text-align: center;
@@ -118,6 +119,7 @@ a svg rect {
 }
 #catContainer {
   width: 1100px;
+  height: 880px;
   background: rgba(0, 0, 0, 0.4);
   padding: 40px;
   text-align: center;
@@ -134,12 +136,26 @@ h2, footer {
   padding-right: 50px;
   padding-top: 20px;
 }
+footer p {
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+}
 #header {
   color: white;
 }
 #dogbutton:hover, #dogbutton:active {
   font-size: 150%;
 }
+.dogbutton {
+  position: absolute;
+}
 #catbutton:hover, #catbutton:active {
   font-size: 150%;
+}
+#submit {
+  position: absolute;
+}
+
+html{
+  overflow:auto
 }

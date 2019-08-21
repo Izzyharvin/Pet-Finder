@@ -21,7 +21,9 @@ module.exports = function(app) {
         res.json(results);
       });
   });
-  app.get("/api/petfinder", function(req, res) {
+  app.post("/api/animal", function(req, res) {
+    var holder = req.body;
+    // console.log(holder);
     var options = {
       method: "POST",
       data: {
@@ -42,46 +44,34 @@ module.exports = function(app) {
       var config = {
         headers: { Authorization: "Bearer " + bearer }
       };
-      var type = req.params.something;
-      var location = $("#q1")
-        .val()
-        .trim();
-      var distance = $("#q2").val();
-      var gender = $("#q3").val();
-      var age = $("#q4").val();
-      var good_with_children = $("#q5").val();
-      var good_with_dogs = $("#q6").val();
-      var good_with_cats = $("#q7").val();
-      var size = $("#q8").val();
-      var coat = $("#q9").val();
-
       axios
         // .get("https://api.petfinder.com/v2/animals?type=dog&page=2", config)
         .get(
           "https://api.petfinder.com/v2/animals?type=" +
-            type +
+            holder.type +
             "&location=" +
-            parseInt(location) +
+            holder.name +
             "&distance=" +
-            distance +
+            parseInt(holder.q2) +
             "&gender=" +
-            gender +
+            holder.q3 +
             "&age=" +
-            age +
+            holder.q4 +
             "&good_with_children=" +
-            good_with_children +
+            holder.q5 +
             "&good_with_dogs=" +
-            good_with_dogs +
+            holder.q6 +
             "&good_with_cats" +
-            good_with_cats +
+            holder.q7 +
             "&size=" +
-            size +
+            holder.q8 +
             "&coat" +
-            coat,
+            holder.q9,
           config
         )
         .then(function(pets) {
-          res.json(pets.data);
+          console.log(pets);
+          res.render("example", pets);
         })
         .catch(function(err) {
           console.log(err);

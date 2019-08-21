@@ -109,3 +109,24 @@ $catBtn.on("click", function(event) {
   customerSubmit("cat");
 });
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+// $("#submitIt").on("click", function(event) {
+//   console.log("clicked!!!!!!")
+//   event.preventDefault();
+  
+//   var animalInfo = {
+//     type: $(this).val(),
+//     location: $("#q1").val(),
+//     distance: $("#q2").val(),
+//     gender: $("#q3").val(),
+//     age: $("#q4").val(),
+//     good_with_children: $("#q5").val(),
+//     good_with_dogs: $("#q6").val(),
+//     good_with_cats: $("#q7").val(),
+//     size: $("#q8").val(),
+//     coat: $("#q9").val()
+//   }
+//   $.post("/api/animal", animalInfo).then(function(results) {
+//     console.log(results);
+//   })
+// });

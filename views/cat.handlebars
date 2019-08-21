@@ -78,7 +78,7 @@
                 </select>
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitIt" value="cat">
                     <i class="fa fa-check-circle"></i>Submit
                 </button>
             </div>
@@ -127,29 +127,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script>
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-
-            // console.log("listen")
-
-            var userAnswer = {
-                name: $(".name").val().trim(),
-                photo: $(".photo").val().trim(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val(),
-                ]
-            }
-        })
-
-    </script>
+    <script src="./js/index.js"></script>
 </body>

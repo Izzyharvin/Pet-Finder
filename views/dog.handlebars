@@ -5,9 +5,82 @@
             </h2>
 
             <div class="container" id="dogContainer">
-                <form>
+                <form action="/api/animal" method="post">
                     Zip Code (Required)<br>
                     <input type="text" name="name" class="name" id="q1">
+                    <input type="hidden" id="animalType" name="type" value="dog">
+
+                    <h4>How far out would you like us to search from your zip code?</h4>
+                    <select name='q2' id="q2">
+                        <option value>Select an option</option>
+                        <option value="25">25 miles</option>
+                        <option value="50">50 miles</option>
+                        <option value="75">75 miles</option>
+                        <option value="100">100 miles</option>
+                    </select>
+
+                    <h4>Do you want a boy or a girl?</h4>
+                    <select name="q3">
+                        <option value>Select an option</option>
+                        <option value="male">Boy</option>
+                        <option value="female">Girl</option>
+                        <option value="unknown">Either</option>
+                    </select>
+
+                    <h4>What age range are you looking for?</h4>
+                    <select name="q4">
+                        <option value>Select an option</option>
+                        <option value="baby">Baby</option>
+                        <option value="young">Young</option>
+                        <option value="adult">Adult</option>
+                        <option value="senior">Senior</option>
+                    </select>
+
+                    <h4>Do you have children?</h4>
+                    <select name="q5">
+                        <option value>Select an option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                    <h4>Do you have other dogs?</h4>
+                    <select name="q6">
+                        <option value>Select an option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                    <h4>Do you have cats?</h4>
+                    <select name="q7">
+                        <option value>Select an option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                    <h4>What size dog are you looking for?</h4>
+                    <select name="q8">
+                        <option value>Select an option</option>
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                        <option value="xlarge">Big boy/girl!</option>
+                    </select>
+
+                    <h4>What kind of coat?</h4>
+                    <select name="q9">
+                        <option value>Select an option</option>
+                        <option value="short">Short</option>
+                        <option value="medium">Medium</option>
+                        <option value="long">Long</option>
+                        <option value="wire">Wire</option>
+                        <option value="curly">Curly</option>
+                        <option value="null">No preference</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitIt">
+                        <i class="fa fa-check-circle"></i>Submit
+                    </button>
                 </form>
 
                 <h4>How far out would you like us to search from your zip code?</h4>
@@ -129,29 +202,5 @@
     </script>
     <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
 
-    <script>
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-
-            // console.log("listen")
-
-            var userAnswer = {
-                name: $(".name").val().trim(),
-                photo: $(".photo").val().trim(),
-                answers: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val(),
-                ]
-            }
-        })
-
-    </script>
+    <script src="./js/index.js"></script>
 </body>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title" style="text-align: center">Pets to choose from</h2>
+          <br><br>
+          {{#each pets}}
+          {{!-- <img src="{{image.small}}" alt="Picture of pet"> --}}
+          <p><strong>Name</strong>: {{name}}</p>
+          <p><strong>Gender</strong>: {{gender}}</p>
+          <p><strong>Age</strong>: {{age}}</p>
+          <p><strong>Description</strong>: {{description}}</p>
+          <p><strong>Shelter</strong>: {{url}}</p>
+          <hr>
+          <br><br>
+          {{/each}}
+
+          <a href="/">← Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

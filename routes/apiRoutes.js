@@ -54,7 +54,7 @@ module.exports = function(app) {
       holder.type
        +
       "&location=" +
-      holder.name +
+      holder.q1 +
       "&distance=" +
       parseInt(holder.q2) +
       "&gender=" +

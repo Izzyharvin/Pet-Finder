@@ -47,10 +47,10 @@ module.exports = function(app) {
       axios
         // .get("https://api.petfinder.com/v2/animals?type=dog&page=2", config)
         .get(
-          "https://api.petfinder.com/v2/animals?type=" +
+          "https://api.petfinder.com/v2/animals?limit=3&type=" +
             holder.type +
             "&location=" +
-            holder.name +
+            holder.q1 +
             "&distance=" +
             parseInt(holder.q2) +
             "&gender=" +
@@ -61,11 +61,11 @@ module.exports = function(app) {
             holder.q5 +
             "&good_with_dogs=" +
             holder.q6 +
-            "&good_with_cats" +
+            "&good_with_cats=" +
             holder.q7 +
             "&size=" +
             holder.q8 +
-            "&coat" +
+            "&coat=" +
             holder.q9,
           config
         )

@@ -25,6 +25,3 @@ https://awesomeproject2.herokuapp.com/
 
 - There will also be a link to each result that will send you to the pet finder page of that pet you choose.
 ![link](./public/pictures/linkpage.png)
-
-Creator of App
-Israel Harvin
